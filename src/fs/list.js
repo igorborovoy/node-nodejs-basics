@@ -1,3 +1,11 @@
+import { readdir } from 'fs';
+
 export const list = async () => {
-    // Write your code here 
+    const srcPath = './files';
+    readdir(srcPath, (err, files) => {
+        if (err) throw new Error('FS operation falied');
+        files.forEach((filePath) => console.log(filePath))
+    });
 };
+
+list();
