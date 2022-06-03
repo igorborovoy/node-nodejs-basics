@@ -3,8 +3,6 @@ import { readFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import { release, version } from 'os';
 import { createServer as createServerHttp } from 'http';
-import './files/a.json' assert { type: 'json'};
-import './files/b.json' assert { type: 'json'};
 import './files/c.js';
 
 const random = Math.random();
